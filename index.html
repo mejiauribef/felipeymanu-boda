@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felipe & Manuela - ¡Nos Casamos!</title>
+
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:title" content="Felipe & Manuela - ¡Nos Casamos!">
+  <meta property="og:description" content="Estamos felices de invitarte a celebrar nuestra boda. 18 de julio de 2026 - Llano Grande">
+  <meta property="og:image" content="assets/images/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta name="description" content="Invitación de boda de Felipe Mejía y Manuela Noreña. 18 de julio de 2026.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-greeting" id="hero-greeting">Te invitamos a celebrar nuestro amor</p>
+      <h1 class="hero-names">
+        Felipe
+        <span class="hero-ampersand">&</span>
+        Manuela
+      </h1>
+      <p class="hero-date">18 de julio de 2026</p>
+      <button class="btn" id="btn-open" aria-label="Abrir invitación">
+        Abrir Invitación
+      </button>
+    </div>
+  </section>
+
+  <!-- ==================== MAIN CONTENT (hidden until open) ==================== -->
+  <main id="main-content" class="content-hidden">
+
+    <!-- ==================== COUNTDOWN ==================== -->
+    <section class="countdown-section" id="countdown">
+      <div class="container reveal">
+        <h2>Faltan</h2>
+        <div class="countdown-grid" id="countdown-grid">
+          <div class="countdown-item">
+            <span class="countdown-number" id="cd-days">--</span>
+            <span class="countdown-label">Días</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="cd-hours">--</span>
+            <span class="countdown-label">Horas</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="cd-minutes">--</span>
+            <span class="countdown-label">Minutos</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="cd-seconds">--</span>
+            <span class="countdown-label">Segundos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EVENT INFO ==================== -->
+    <section class="event-section" id="event">
+      <div class="container">
+        <div class="divider"><span class="divider-icon">&#10047;</span></div>
+        <h2 class="reveal">Nuestra Celebración</h2>
+        <p class="section-subtitle reveal">Un día que soñamos compartir contigo</p>
+
+        <div class="event-cards reveal-stagger">
+          <div class="event-card">
+            <div class="event-card-icon">&#9829;</div>
+            <h3>Ceremonia</h3>
+            <p>
+              <strong>Sábado 18 de julio, 2026</strong><br>
+              3:00 PM<br><br>
+              Zona Campestre Eventos<br>
+              Llano Grande, Antioquia
+            </p>
+          </div>
+          <div class="event-card">
+            <div class="event-card-icon">&#127867;</div>
+            <h3>Recepción</h3>
+            <p>
+              <strong>Sábado 18 de julio, 2026</strong><br>
+              Después de la ceremonia<br><br>
+              Zona Campestre Eventos<br>
+              Llano Grande, Antioquia
+            </p>
+            <a href="https://www.google.com/maps/search/Zona+Campestre+Eventos+Llano+Grande" target="_blank" rel="noopener" class="btn btn-outline">
+              Cómo llegar
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MAP ==================== -->
+    <section class="map-section" id="map">
+      <div class="container">
+        <h2 class="reveal">Ubicación</h2>
+        <p class="section-subtitle reveal">Zona Campestre Eventos, Llano Grande</p>
+        <div class="map-container reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Zona+Campestre+Eventos+Llano+Grande&output=embed"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación del evento">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== GALLERY ==================== -->
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <div class="divider"><span class="divider-icon">&#10047;</span></div>
+        <h2 class="reveal">Nuestra Historia</h2>
+        <p class="section-subtitle reveal">Algunos de nuestros momentos favoritos</p>
+
+        <div class="gallery-grid reveal-stagger" id="gallery-grid">
+          <div class="gallery-item" data-index="0">
+            <img src="assets/images/gallery-1.jpg" alt="Felipe y Manuela" loading="lazy">
+          </div>
+          <div class="gallery-item" data-index="1">
+            <img src="assets/images/gallery-2.jpg" alt="Felipe y Manuela" loading="lazy">
+          </div>
+          <div class="gallery-item" data-index="2">
+            <img src="assets/images/gallery-3.jpg" alt="Felipe y Manuela" loading="lazy">
+          </div>
+          <div class="gallery-item" data-index="3">
+            <img src="assets/images/gallery-4.jpg" alt="Felipe y Manuela" loading="lazy">
+          </div>
+          <div class="gallery-item" data-index="4">
+            <img src="assets/images/gallery-5.jpg" alt="Felipe y Manuela" loading="lazy">
+          </div>
+          <div class="gallery-item" data-index="5">
+            <img src="assets/images/gallery-6.jpg" alt="Felipe y Manuela" loading="lazy">
+          </div>
+        </div>
+
+        <div class="gallery-cta reveal">
+          <a href="#" target="_blank" rel="noopener" class="btn btn-outline" id="album-link">
+            Subir fotos al álbum compartido
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Visor de fotos">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Anterior">&#10094;</button>
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Siguiente">&#10095;</button>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="Foto ampliada">
+    </div>
+
+    <!-- ==================== RSVP ==================== -->
+    <section class="rsvp-section" id="rsvp">
+      <div class="container">
+        <div class="divider"><span class="divider-icon">&#10047;</span></div>
+        <h2 class="reveal">Confirmación de Asistencia</h2>
+        <p class="section-subtitle reveal">Por favor confirma antes del 1 de julio de 2026</p>
+
+        <form class="rsvp-form reveal" id="rsvp-form">
+          <div class="form-group">
+            <label for="rsvp-name">Nombre completo</label>
+            <input type="text" id="rsvp-name" name="nombre" required placeholder="Tu nombre">
+          </div>
+
+          <div class="form-group">
+            <label for="rsvp-attendance">¿Asistirás?</label>
+            <select id="rsvp-attendance" name="asistencia" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="si">¡Sí, con toda!</option>
+              <option value="no">No podré asistir</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="rsvp-guests">Número de acompañantes (incluyéndote)</label>
+            <select id="rsvp-guests" name="acompanantes" required>
+              <option value="" disabled selected>Selecciona</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="rsvp-message">Mensaje para los novios (opcional)</label>
+            <textarea id="rsvp-message" name="mensaje" rows="3" placeholder="Escríbenos algo bonito..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Confirmar Asistencia</button>
+        </form>
+
+        <div class="rsvp-success" id="rsvp-success">
+          <h3>¡Gracias por confirmar!</h3>
+          <p>Estamos felices de contar contigo. Nos vemos el 18 de julio.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DRESSCODE ==================== -->
+    <section class="dresscode-section" id="dresscode">
+      <div class="container">
+        <div class="divider"><span class="divider-icon">&#10047;</span></div>
+        <h2 class="reveal">Código de Vestimenta</h2>
+        <p class="dresscode-type reveal">Formal / Elegante</p>
+        <p class="section-subtitle reveal">Paleta de colores sugerida</p>
+
+        <div class="color-palette reveal-stagger">
+          <div class="color-swatch" style="background:#5C6B5A" title="Verde salvia"></div>
+          <div class="color-swatch" style="background:#B8976A" title="Dorado"></div>
+          <div class="color-swatch" style="background:#8B7355" title="Café tierra"></div>
+          <div class="color-swatch" style="background:#D4A5A5" title="Rosa empolvado"></div>
+          <div class="color-swatch" style="background:#2F4F4F" title="Verde oscuro"></div>
+          <div class="color-swatch" style="background:#C4B7A6" title="Beige"></div>
+        </div>
+
+        <p class="dresscode-note reveal">* Por favor evitar el color blanco, reservado para la novia</p>
+      </div>
+    </section>
+
+    <!-- ==================== GIFTS ==================== -->
+    <section class="gifts-section" id="gifts">
+      <div class="container">
+        <div class="divider"><span class="divider-icon">&#10047;</span></div>
+        <h2 class="reveal">Mesa de Regalos</h2>
+        <p class="section-subtitle reveal">Tu presencia es nuestro mejor regalo</p>
+
+        <div class="gifts-content">
+          <div class="gift-option reveal">
+            <div class="gift-option-icon">&#128141;</div>
+            <h3>Lluvia de Sobres</h3>
+            <p>Tendremos un buzón especial en el evento para quienes deseen obsequiarnos un sobre.</p>
+          </div>
+
+          <div class="gift-option reveal">
+            <div class="gift-option-icon">&#127974;</div>
+            <h3>Transferencia Bancaria</h3>
+            <p>
+              Si prefieres hacerlo de forma digital:<br><br>
+              <strong>Bancolombia - Cuenta de Ahorros</strong><br>
+              <span id="account-number">XXX-XXXXXXXX-XX</span>
+            </p>
+            <button class="copy-account" id="btn-copy" data-account="XXXXXXXXXXX">
+              <span>Copiar número</span>
+            </button>
+            <p class="copy-feedback" id="copy-feedback">¡Copiado!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+      <p class="footer-names">Felipe & Manuela</p>
+      <p class="footer-date">18 de julio de 2026</p>
+      <div class="footer-heart">&#10084;</div>
+      <p style="font-size: 0.75rem; opacity: 0.5;">Hecho con amor</p>
+    </footer>
+  </main>
+
+  <!-- Music Player -->
+  <button class="music-player content-hidden" id="music-player" aria-label="Reproducir/Pausar música">
+    <span id="music-icon">&#9835;</span>
+  </button>
+
+  <audio id="bg-music" loop preload="none">
+    <source src="assets/audio/background-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- JS -->
+  <script src="js/personalization.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/scroll-reveal.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/music.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

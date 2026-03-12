@@ -1,0 +1,127 @@
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-cream);
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
+
+.section-subtitle {
+  font-family: var(--font-accent);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-bottom: var(--gap-lg);
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+section {
+  padding: var(--section-padding);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: var(--section-padding-mobile);
+  }
+}
+
+/* Decorative divider */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-md);
+  margin: var(--gap-lg) auto;
+  max-width: 200px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-gold-light);
+}
+
+.divider-icon {
+  color: var(--color-gold);
+  font-size: 1.2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all var(--transition-fast);
+}
+
+.btn-primary {
+  background: var(--color-sage);
+  color: var(--color-white);
+  border: 2px solid var(--color-sage);
+}
+
+.btn-primary:hover {
+  background: var(--color-sage-dark);
+  border-color: var(--color-sage-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-sage);
+  border: 2px solid var(--color-sage);
+}
+
+.btn-outline:hover {
+  background: var(--color-sage);
+  color: var(--color-white);
+}
+
+.btn-gold {
+  background: var(--color-gold);
+  color: var(--color-white);
+  border: 2px solid var(--color-gold);
+}
+
+.btn-gold:hover {
+  background: var(--color-gold-dark);
+  border-color: var(--color-gold-dark);
+}
+
+/* Hidden content (revealed after opening invitation) */
+.content-hidden {
+  display: none;
+}
+
+.content-visible {
+  display: block;
+}
+
+/* Floral ornament placeholder */
+.floral-ornament {
+  width: 120px;
+  height: auto;
+  margin: 0 auto var(--gap-lg);
+  opacity: 0.6;
+}
