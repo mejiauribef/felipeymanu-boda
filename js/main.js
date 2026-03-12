@@ -7,10 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. "Open Invitation" gate
   const btnOpen = document.getElementById('btn-open');
+  const hero = document.getElementById('hero');
   const mainContent = document.getElementById('main-content');
   const musicPlayer = document.getElementById('music-player');
 
   btnOpen.addEventListener('click', () => {
+    // Fade out and remove the hero completely
+    hero.style.transition = 'opacity 0.6s ease';
+    hero.style.opacity = '0';
+    hero.addEventListener('transitionend', () => {
+      hero.remove();
+    }, { once: true });
+
     // Reveal content
     mainContent.classList.remove('content-hidden');
     mainContent.classList.add('content-visible');
@@ -26,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initGallery();
 
-    // Smooth scroll to countdown
-    document.getElementById('countdown').scrollIntoView({ behavior: 'smooth' });
+    // Scroll to top (countdown will be at top since hero is removed)
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   // 3. Music player toggle

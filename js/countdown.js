@@ -4,8 +4,8 @@
 let countdownInterval = null;
 
 function initCountdown() {
-  // July 18, 2026 3:00 PM UTC-5 = July 18, 2026 8:00 PM UTC
-  const weddingDate = new Date('2026-07-18T20:00:00Z');
+  // July 18, 2026 5:00 PM UTC-5 = July 18, 2026 10:00 PM UTC
+  const weddingDate = new Date('2026-07-18T22:00:00Z');
 
   function update() {
     const now = new Date();

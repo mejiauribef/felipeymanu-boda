@@ -130,6 +130,13 @@
   }
 }
 
+.event-cards--single {
+  grid-template-columns: 1fr;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .event-card {
   background: var(--color-white);
   border-radius: var(--radius-md);
