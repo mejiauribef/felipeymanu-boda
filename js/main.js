@@ -12,12 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const musicPlayer = document.getElementById('music-player');
 
   btnOpen.addEventListener('click', () => {
-    // Fade out and remove the hero completely
-    hero.style.transition = 'opacity 0.6s ease';
-    hero.style.opacity = '0';
-    hero.addEventListener('transitionend', () => {
-      hero.remove();
-    }, { once: true });
+    // Remove hero from DOM immediately
+    hero.remove();
 
     // Reveal content
     mainContent.classList.remove('content-hidden');
@@ -34,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initGallery();
 
-    // Scroll to top (countdown will be at top since hero is removed)
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll to top
+    window.scrollTo(0, 0);
   });
 
   // 3. Music player toggle

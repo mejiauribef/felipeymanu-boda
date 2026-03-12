@@ -130,7 +130,7 @@
   }
 }
 
-.event-cards--single {
+.event-cards.event-cards--single {
   grid-template-columns: 1fr;
   max-width: 420px;
   margin-left: auto;
