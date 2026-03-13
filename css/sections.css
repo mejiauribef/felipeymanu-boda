@@ -128,10 +128,12 @@
   .event-cards {
     grid-template-columns: 1fr 1fr;
   }
+  .event-cards.event-cards--single {
+    grid-template-columns: 1fr;
+  }
 }
 
-.event-cards.event-cards--single {
-  grid-template-columns: 1fr;
+.event-cards--single {
   max-width: 420px;
   margin-left: auto;
   margin-right: auto;
@@ -168,7 +170,7 @@
 
 /* ===================== MAP ===================== */
 .map-section {
-  padding-bottom: 0;
+  padding-bottom: 4rem;
 }
 
 .map-container {
