@@ -1,7 +1,7 @@
 /**
  * Photo carousel with random order, swipe support, and lightbox.
  */
-const TOTAL_PHOTOS = 66;
+const TOTAL_PHOTOS = 64;
 let carouselIndex = 0;
 let shuffledPhotos = [];
 
