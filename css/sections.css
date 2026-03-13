@@ -18,7 +18,7 @@
   background:
     linear-gradient(to bottom, rgba(30,28,25,0.35), rgba(30,28,25,0.6)),
     url('../assets/images/hero-bg.jpg') center/cover no-repeat;
-  background-color: #6B7B69;
+  background-color: #6E5E50;
   z-index: -1;
 }
 
@@ -527,7 +527,7 @@
 }
 
 @keyframes pulse-ring {
-  0% { box-shadow: 0 4px 15px rgba(0,0,0,0.2), 0 0 0 0 rgba(92, 107, 90, 0.4); }
-  70% { box-shadow: 0 4px 15px rgba(0,0,0,0.2), 0 0 0 12px rgba(92, 107, 90, 0); }
-  100% { box-shadow: 0 4px 15px rgba(0,0,0,0.2), 0 0 0 0 rgba(92, 107, 90, 0); }
+  0% { box-shadow: 0 4px 15px rgba(0,0,0,0.2), 0 0 0 0 rgba(140, 123, 107, 0.4); }
+  70% { box-shadow: 0 4px 15px rgba(0,0,0,0.2), 0 0 0 12px rgba(140, 123, 107, 0); }
+  100% { box-shadow: 0 4px 15px rgba(0,0,0,0.2), 0 0 0 0 rgba(140, 123, 107, 0); }
 }

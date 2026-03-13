@@ -118,10 +118,25 @@ section {
   display: block;
 }
 
-/* Floral ornament placeholder */
+/* Floral ornaments */
 .floral-ornament {
-  width: 120px;
+  width: 180px;
   height: auto;
-  margin: 0 auto var(--gap-lg);
-  opacity: 0.6;
+  margin: 0 auto var(--gap-md);
+  opacity: 0.8;
+}
+
+.floral-ornament--large {
+  width: 280px;
+  margin-bottom: var(--gap-lg);
+}
+
+.floral-ornament--inverted {
+  transform: rotate(180deg);
+  margin-bottom: var(--gap-lg);
+}
+
+@media (max-width: 600px) {
+  .floral-ornament { width: 140px; }
+  .floral-ornament--large { width: 220px; }
 }
