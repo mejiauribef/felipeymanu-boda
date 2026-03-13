@@ -230,8 +230,34 @@
   transform: scale(1.05);
 }
 
-.gallery-cta {
-  margin-top: var(--gap-lg);
+/* ===================== SHARED ALBUM ===================== */
+.album-section {
+  background: var(--color-cream);
+}
+
+.album-content {
+  max-width: 500px;
+  margin: var(--gap-lg) auto 0;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--gap-xl) var(--gap-lg);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+
+.album-icon {
+  font-size: 3rem;
+  margin-bottom: var(--gap-md);
+}
+
+.album-content p {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: var(--gap-lg);
+}
+
+.album-content .btn {
+  display: inline-block;
 }
 
 /* Lightbox */
