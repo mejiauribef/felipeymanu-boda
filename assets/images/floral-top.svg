@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
   <!-- Left branch -->
-  <path d="M200 100 C180 80, 140 75, 100 85" stroke="#D4B5A0" stroke-width="1.2" fill="none"/>
-  <path d="M200 100 C175 70, 120 60, 60 70" stroke="#D4B5A0" stroke-width="1" fill="none" opacity="0.7"/>
+  <path d="M200 100 C180 80, 140 75, 100 85" stroke="#be9485" stroke-width="1.2" fill="none"/>
+  <path d="M200 100 C175 70, 120 60, 60 70" stroke="#be9485" stroke-width="1" fill="none" opacity="0.7"/>
   <!-- Right branch -->
-  <path d="M200 100 C220 80, 260 75, 300 85" stroke="#D4B5A0" stroke-width="1.2" fill="none"/>
-  <path d="M200 100 C225 70, 280 60, 340 70" stroke="#D4B5A0" stroke-width="1" fill="none" opacity="0.7"/>
+  <path d="M200 100 C220 80, 260 75, 300 85" stroke="#be9485" stroke-width="1.2" fill="none"/>
+  <path d="M200 100 C225 70, 280 60, 340 70" stroke="#be9485" stroke-width="1" fill="none" opacity="0.7"/>
   <!-- Left leaves -->
   <ellipse cx="120" cy="78" rx="12" ry="6" transform="rotate(-25 120 78)" fill="white" opacity="0.5"/>
   <ellipse cx="145" cy="73" rx="10" ry="5" transform="rotate(-15 145 73)" fill="white" opacity="0.45"/>
@@ -24,14 +24,14 @@
   <ellipse cx="208" cy="54" rx="8" ry="12" transform="rotate(288 208 54)" fill="white" opacity="0.3"/>
   <!-- Small buds left -->
   <circle cx="100" cy="80" r="4" fill="white" opacity="0.4"/>
-  <circle cx="100" cy="80" r="2" fill="#C9A87C" opacity="0.3"/>
+  <circle cx="100" cy="80" r="2" fill="#E1c2b7" opacity="0.3"/>
   <circle cx="68" cy="72" r="3.5" fill="white" opacity="0.35"/>
-  <circle cx="68" cy="72" r="1.5" fill="#C9A87C" opacity="0.25"/>
+  <circle cx="68" cy="72" r="1.5" fill="#E1c2b7" opacity="0.25"/>
   <!-- Small buds right -->
   <circle cx="300" cy="80" r="4" fill="white" opacity="0.4"/>
-  <circle cx="300" cy="80" r="2" fill="#C9A87C" opacity="0.3"/>
+  <circle cx="300" cy="80" r="2" fill="#E1c2b7" opacity="0.3"/>
   <circle cx="332" cy="72" r="3.5" fill="white" opacity="0.35"/>
-  <circle cx="332" cy="72" r="1.5" fill="#C9A87C" opacity="0.25"/>
+  <circle cx="332" cy="72" r="1.5" fill="#E1c2b7" opacity="0.25"/>
   <!-- Side flowers -->
   <circle cx="155" cy="70" r="2.5" fill="white" opacity="0.5"/>
   <ellipse cx="155" cy="63" rx="6" ry="9" fill="white" opacity="0.25"/>

@@ -1,17 +1,17 @@
 :root {
-  /* Colors — Modern Nude/Café Wedding */
-  --color-cream: #F5F0EB;
-  --color-cream-dark: #EBE3DA;
-  --color-sage: #8C7B6B;
-  --color-sage-light: #A89888;
-  --color-sage-dark: #6E5E50;
-  --color-gold: #C9A87C;
-  --color-gold-light: #DBBF9A;
-  --color-gold-dark: #A88B5E;
-  --color-text: #3D2E2A;
-  --color-text-light: #7A6B63;
+  /* Colors — Nude Blush Wedding */
+  --color-cream: #f5eee8;          /* Bridal White */
+  --color-cream-dark: #e1ccc7;     /* Cherish */
+  --color-sage: #be9485;           /* Rose Gold — primary */
+  --color-sage-light: #d4a99b;     /* Rose Gold light */
+  --color-sage-dark: #a67d6f;      /* Rose Gold dark */
+  --color-gold: #E1c2b7;           /* Nude Blush — accent */
+  --color-gold-light: #edd5cd;     /* Nude Blush light */
+  --color-gold-dark: #c9a89c;      /* Nude Blush dark */
+  --color-text: #4a3533;
+  --color-text-light: #7d6360;
   --color-white: #FFFFFF;
-  --color-overlay: rgba(45, 32, 25, 0.55);
+  --color-overlay: rgba(55, 35, 33, 0.5);
 
   /* Fonts */
   --font-display: 'Playfair Display', Georgia, serif;
