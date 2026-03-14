@@ -66,7 +66,7 @@ function initRSVP() {
     const nombre = form.querySelector('[name="nombre"]').value.trim();
     const asistencia = form.querySelector('[name="asistencia"]').value;
 
-    const APPS_SCRIPT_URL = 'REPLACE_WITH_APPS_SCRIPT_URL';
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwAg2PX-bU8JMDNqt9Ux8lkbbTQtHmlcRFnpMQ7UjTGldNVqwKfDD6IbykvWEJYRSRgCg/exec';
 
     if (APPS_SCRIPT_URL === 'REPLACE_WITH_APPS_SCRIPT_URL') {
       // Fallback: demo mode until script URL is set
