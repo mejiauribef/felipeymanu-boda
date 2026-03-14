@@ -286,15 +286,13 @@
   width: 0%;
 }
 
-/* Mobile: centered photo with 1/3 peek on each side */
+/* Mobile: single photo */
 @media (max-width: 768px) {
   .carousel-track {
-    gap: 0.5rem;
-    padding: 1rem 20%;
+    gap: 0;
   }
   .carousel-slide {
-    min-width: 60%;
-    flex-shrink: 0;
+    min-width: 100%;
   }
   .carousel-nav {
     width: 36px;
