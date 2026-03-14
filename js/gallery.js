@@ -1,15 +1,16 @@
 /**
- * Photo carousel with random order, swipe support, and lightbox.
+ * Photo carousel with multi-photo view, progress bar, swipe, and lightbox.
  */
 const TOTAL_PHOTOS = 64;
 let carouselIndex = 0;
 let shuffledPhotos = [];
+let photosPerView = 3;
 
 function initGallery() {
   const track = document.getElementById('carousel-track');
-  const dots = document.getElementById('carousel-dots');
   const prevBtn = document.getElementById('carousel-prev');
   const nextBtn = document.getElementById('carousel-next');
+  const progressBar = document.getElementById('carousel-progress-bar');
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxClose = document.getElementById('lightbox-close');
@@ -18,7 +19,17 @@ function initGallery() {
 
   if (!track) return;
 
-  // Build shuffled array of photo indices [1..47]
+  // Responsive photos per view
+  function updatePhotosPerView() {
+    photosPerView = window.innerWidth <= 768 ? 1 : 3;
+  }
+  updatePhotosPerView();
+  window.addEventListener('resize', () => {
+    updatePhotosPerView();
+    goTo(Math.min(carouselIndex, maxIndex()));
+  });
+
+  // Build shuffled array
   shuffledPhotos = Array.from({ length: TOTAL_PHOTOS }, (_, i) => i + 1);
   shuffle(shuffledPhotos);
 
@@ -29,17 +40,34 @@ function initGallery() {
     slide.innerHTML = `<img src="assets/images/gallery/gallery-${n}.jpg" alt="Manuela y Felipe" loading="lazy">`;
     slide.addEventListener('click', () => openLightbox(i));
     track.appendChild(slide);
-
-    const dot = document.createElement('button');
-    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-    dot.setAttribute('aria-label', `Foto ${i + 1}`);
-    dot.addEventListener('click', () => goTo(i));
-    dots.appendChild(dot);
   });
 
+  function maxIndex() {
+    return Math.max(0, TOTAL_PHOTOS - photosPerView);
+  }
+
+  function getSlideWidth() {
+    const slide = track.querySelector('.carousel-slide');
+    if (!slide) return 0;
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    return slide.offsetWidth + gap;
+  }
+
+  function goTo(index) {
+    carouselIndex = Math.max(0, Math.min(index, maxIndex()));
+    const offset = carouselIndex * getSlideWidth();
+    track.style.transform = `translateX(-${offset}px)`;
+    // Update progress bar
+    const progress = maxIndex() > 0 ? ((carouselIndex + photosPerView) / TOTAL_PHOTOS) * 100 : 100;
+    progressBar.style.width = Math.min(progress, 100) + '%';
+  }
+
+  // Initial progress
+  goTo(0);
+
   // Navigation
-  prevBtn.addEventListener('click', () => goTo(carouselIndex - 1));
-  nextBtn.addEventListener('click', () => goTo(carouselIndex + 1));
+  prevBtn.addEventListener('click', () => goTo(carouselIndex - photosPerView));
+  nextBtn.addEventListener('click', () => goTo(carouselIndex + photosPerView));
 
   // Swipe
   let touchStartX = 0;
@@ -54,54 +82,52 @@ function initGallery() {
     }
   }, { passive: true });
 
-  // Keyboard for carousel
+  // Keyboard
   document.addEventListener('keydown', (e) => {
     if (lightbox.classList.contains('active')) return;
     if (e.key === 'ArrowLeft') goTo(carouselIndex - 1);
     if (e.key === 'ArrowRight') goTo(carouselIndex + 1);
   });
 
-  function goTo(index) {
-    carouselIndex = (index + TOTAL_PHOTOS) % TOTAL_PHOTOS;
-    track.style.transform = `translateX(-${carouselIndex * 100}%)`;
-    dots.querySelectorAll('.carousel-dot').forEach((d, i) => {
-      d.classList.toggle('active', i === carouselIndex);
-    });
+  // Auto-advance
+  let autoPlay = setInterval(() => goTo(carouselIndex + 1), 4000);
+
+  function resetAutoPlay() {
+    clearInterval(autoPlay);
+    autoPlay = setInterval(() => goTo(carouselIndex + 1), 4000);
   }
 
-  // Auto-advance every 5 seconds
-  let autoPlay = setInterval(() => goTo(carouselIndex + 1), 5000);
-
-  // Pause on interaction
   [prevBtn, nextBtn, track].forEach(el => {
-    el.addEventListener('pointerdown', () => {
-      clearInterval(autoPlay);
-      autoPlay = setInterval(() => goTo(carouselIndex + 1), 5000);
-    });
+    el.addEventListener('pointerdown', resetAutoPlay);
   });
 
   // --- Lightbox ---
+  let lightboxIndex = 0;
+
   function openLightbox(index) {
-    carouselIndex = index;
+    lightboxIndex = index;
     lightboxImg.src = `assets/images/gallery/gallery-${shuffledPhotos[index]}.jpg`;
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
+    clearInterval(autoPlay);
   }
 
   function closeLightbox() {
     lightbox.classList.remove('active');
     document.body.style.overflow = '';
+    resetAutoPlay();
   }
 
   function lightboxNav(dir) {
-    carouselIndex = (carouselIndex + dir + TOTAL_PHOTOS) % TOTAL_PHOTOS;
-    lightboxImg.src = `assets/images/gallery/gallery-${shuffledPhotos[carouselIndex]}.jpg`;
-    // Sync carousel position
-    track.style.transform = `translateX(-${carouselIndex * 100}%)`;
-    dots.querySelectorAll('.carousel-dot').forEach((d, i) => {
-      d.classList.toggle('active', i === carouselIndex);
-    });
+    lightboxIndex = (lightboxIndex + dir + TOTAL_PHOTOS) % TOTAL_PHOTOS;
+    lightboxImg.style.opacity = '0';
+    setTimeout(() => {
+      lightboxImg.src = `assets/images/gallery/gallery-${shuffledPhotos[lightboxIndex]}.jpg`;
+      lightboxImg.style.opacity = '1';
+    }, 150);
   }
+
+  lightboxImg.style.transition = 'opacity 0.15s ease';
 
   lightboxClose.addEventListener('click', closeLightbox);
   lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
