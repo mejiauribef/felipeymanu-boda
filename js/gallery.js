@@ -65,9 +65,15 @@ function initGallery() {
   // Initial progress
   goTo(0);
 
-  // Navigation
-  prevBtn.addEventListener('click', () => goTo(carouselIndex - photosPerView));
-  nextBtn.addEventListener('click', () => goTo(carouselIndex + photosPerView));
+  // Navigation — advance by 1 on mobile, by photosPerView on desktop
+  prevBtn.addEventListener('click', () => {
+    const step = window.innerWidth <= 768 ? 1 : photosPerView;
+    goTo(carouselIndex - step);
+  });
+  nextBtn.addEventListener('click', () => {
+    const step = window.innerWidth <= 768 ? 1 : photosPerView;
+    goTo(carouselIndex + step);
+  });
 
   // Swipe
   let touchStartX = 0;
