@@ -57,18 +57,19 @@ function initRSVP() {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const data = new FormData(form);
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
 
     submitBtn.textContent = 'Enviando...';
     submitBtn.disabled = true;
 
-    // TODO: Replace with your Google Apps Script URL
-    const APPS_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL';
+    const nombre = form.querySelector('[name="nombre"]').value.trim();
+    const asistencia = form.querySelector('[name="asistencia"]').value;
 
-    if (APPS_SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL') {
-      // Demo mode: simulate success
+    const APPS_SCRIPT_URL = 'REPLACE_WITH_APPS_SCRIPT_URL';
+
+    if (APPS_SCRIPT_URL === 'REPLACE_WITH_APPS_SCRIPT_URL') {
+      // Fallback: demo mode until script URL is set
       setTimeout(() => {
         form.style.display = 'none';
         success.classList.add('show');
@@ -79,7 +80,9 @@ function initRSVP() {
     try {
       await fetch(APPS_SCRIPT_URL, {
         method: 'POST',
-        body: data,
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: 'nombre=' + encodeURIComponent(nombre) + '&asistencia=' + encodeURIComponent(asistencia),
       });
       form.style.display = 'none';
       success.classList.add('show');
