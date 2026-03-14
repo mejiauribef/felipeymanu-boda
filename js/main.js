@@ -78,12 +78,8 @@ function initRSVP() {
     }
 
     try {
-      await fetch(APPS_SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: 'nombre=' + encodeURIComponent(nombre) + '&asistencia=' + encodeURIComponent(asistencia),
-      });
+      const url = APPS_SCRIPT_URL + '?nombre=' + encodeURIComponent(nombre) + '&asistencia=' + encodeURIComponent(asistencia);
+      await fetch(url, { method: 'GET', mode: 'no-cors' });
       form.style.display = 'none';
       success.classList.add('show');
     } catch (err) {
