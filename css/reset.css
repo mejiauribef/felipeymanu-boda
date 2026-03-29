@@ -16,6 +16,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.hero-active {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
 img, picture, video, svg {
   display: block;
   max-width: 100%;

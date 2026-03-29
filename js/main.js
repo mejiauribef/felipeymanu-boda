@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Remove hero from DOM immediately
     hero.remove();
 
+    // Allow scrolling
+    document.body.classList.remove('hero-active');
+
     // Reveal content
     mainContent.classList.remove('content-hidden');
     mainContent.classList.add('content-visible');
