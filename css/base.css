@@ -74,6 +74,12 @@ section {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: all var(--transition-fast);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .btn-primary {
@@ -118,25 +124,29 @@ section {
   display: block;
 }
 
-/* Floral ornaments */
-.floral-ornament {
-  width: 180px;
-  height: auto;
-  margin: 0 auto var(--gap-md);
-  opacity: 0.8;
+/* Section divider — thin line with centered diamond */
+.section-divider {
+  display: flex;
+  align-items: center;
+  max-width: 240px;
+  height: 8px;
+  margin: 0 auto var(--gap-lg);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Crect x='1' y='1' width='6' height='6' rx='0.5' transform='rotate(45 4 4)' fill='%23B9A695'/%3E%3C/svg%3E") center/8px 8px no-repeat;
 }
 
-.floral-ornament--large {
-  width: 280px;
-  margin-bottom: var(--gap-lg);
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
 }
 
-.floral-ornament--inverted {
-  transform: rotate(180deg);
-  margin-bottom: var(--gap-lg);
+.section-divider::before {
+  background: linear-gradient(to right, transparent, var(--color-gold-dark));
+  margin-right: 14px;
 }
 
-@media (max-width: 600px) {
-  .floral-ornament { width: 140px; }
-  .floral-ornament--large { width: 220px; }
+.section-divider::after {
+  background: linear-gradient(to left, transparent, var(--color-gold-dark));
+  margin-left: 14px;
 }

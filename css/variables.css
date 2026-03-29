@@ -1,40 +1,41 @@
 :root {
-  /* Colors — Nude Blush Wedding */
-  --color-cream: #f5eee8;          /* Bridal White */
-  --color-cream-dark: #e1ccc7;     /* Cherish */
-  --color-sage: #be9485;           /* Rose Gold — primary */
-  --color-sage-light: #d4a99b;     /* Rose Gold light */
-  --color-sage-dark: #a67d6f;      /* Rose Gold dark */
-  --color-gold: #E1c2b7;           /* Nude Blush — accent */
-  --color-gold-light: #edd5cd;     /* Nude Blush light */
-  --color-gold-dark: #c9a89c;      /* Nude Blush dark */
-  --color-text: #4a3533;
-  --color-text-light: #7d6360;
-  --color-white: #FFFFFF;
-  --color-overlay: rgba(55, 35, 33, 0.5);
+  /* Colors — Silk Sand Modern */
+  --color-cream: #F7F2EC;          /* Ivory Silk */
+  --color-cream-dark: #EDE4DB;     /* Warm Cream */
+  --color-sage: #B5927E;           /* Warm Mocha — primary */
+  --color-sage-light: #C9A792;     /* Soft Tan */
+  --color-sage-dark: #A27E6F;      /* Mocha Mousse */
+  --color-gold: #C9BBAE;           /* Warm Taupe — secondary */
+  --color-gold-light: #D6CCC2;     /* Greige */
+  --color-gold-dark: #B9A695;      /* Sandstone */
+  --color-accent: #C9A96E;         /* Champagne Gold */
+  --color-text: #3A2D27;           /* Espresso */
+  --color-text-light: #6C5C4D;     /* Deep Brown */
+  --color-white: #FDFBF7;          /* Warm White */
+  --color-overlay: rgba(58, 45, 39, 0.55);
 
   /* Fonts */
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-accent: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Montserrat', 'Segoe UI', sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-accent: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', 'Segoe UI', sans-serif;
 
   /* Spacing */
-  --section-padding: 5rem 1.5rem;
-  --section-padding-mobile: 3.5rem 1rem;
+  --section-padding: 6rem 2rem;
+  --section-padding-mobile: 4rem 1.25rem;
   --container-max: 900px;
   --gap-sm: 0.5rem;
-  --gap-md: 1rem;
-  --gap-lg: 2rem;
-  --gap-xl: 3rem;
+  --gap-md: 1.25rem;
+  --gap-lg: 2.5rem;
+  --gap-xl: 3.5rem;
 
   /* Transitions */
-  --transition-fast: 0.2s ease;
-  --transition-base: 0.4s ease;
-  --transition-slow: 0.8s ease;
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Borders */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 16px;
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
   --radius-full: 50%;
 }
