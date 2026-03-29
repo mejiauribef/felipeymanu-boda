@@ -35,6 +35,22 @@
   margin-bottom: var(--gap-md);
 }
 
+.hero-greeting--personalized {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  opacity: 1;
+  margin-bottom: var(--gap-lg);
+}
+
+.guest-name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.3em;
+}
+
 .hero-names {
   font-family: var(--font-display);
   font-size: clamp(3rem, 8vw, 5.5rem);
@@ -479,31 +495,73 @@
   margin: var(--gap-md) 0;
 }
 
-.color-palette {
+.dresscode-grid {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: var(--gap-lg);
+  margin: var(--gap-lg) auto;
+  max-width: 500px;
+}
+
+.dresscode-col {
+  flex: 1;
+  text-align: center;
+}
+
+.dresscode-col h3 {
+  font-family: var(--font-accent);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-style: italic;
+  color: var(--color-sage);
+  margin-bottom: var(--gap-sm);
+}
+
+.dresscode-col p {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.dresscode-divider {
+  width: 1px;
+  background: var(--color-cream-dark);
+}
+
+.dresscode-restricted {
+  margin-top: var(--gap-lg);
+  text-align: center;
+}
+
+.dresscode-restricted-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: var(--gap-md);
+}
+
+.dresscode-restricted-colors {
   display: flex;
   justify-content: center;
-  gap: var(--gap-md);
-  margin: var(--gap-lg) 0;
-  flex-wrap: wrap;
+  gap: var(--gap-lg);
 }
 
-.color-swatch {
-  width: 50px;
-  height: 50px;
-  border-radius: var(--radius-full);
-  border: 3px solid var(--color-white);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform var(--transition-fast);
-}
-
-.color-swatch:hover {
-  transform: scale(1.15);
-}
-
-.dresscode-note {
+.dresscode-restricted-swatch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 0.9rem;
   color: var(--color-text-light);
-  font-style: italic;
+}
+
+.color-circle {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* ===================== GIFTS ===================== */
