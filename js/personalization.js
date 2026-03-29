@@ -13,9 +13,11 @@ function initPersonalization() {
   const clean = rawName.replace(/<[^>]*>/g, '').trim().substring(0, 100);
   if (!clean) return;
 
-  // Detect two names separated by " y "
+  // Detect plural: " y " between names, or starts with group words (Familia, Los, Las, etc.)
   const parts = clean.split(/\s+y\s+/i);
-  const isPlural = parts.length >= 2 && parts[0].trim() && parts[1].trim();
+  const hasY = parts.length >= 2 && parts[0].trim() && parts[1].trim();
+  const groupPrefixes = /^(familia|fam|los|las)\b/i;
+  const isPlural = hasY || groupPrefixes.test(clean);
 
   const nameSpan = document.createElement('span');
   nameSpan.className = 'guest-name';
