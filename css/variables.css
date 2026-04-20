@@ -9,8 +9,8 @@
   --color-gold-light: #D6CCC2;     /* Greige */
   --color-gold-dark: #B9A695;      /* Sandstone */
   --color-accent: #C9A96E;         /* Champagne Gold */
-  --color-text: #3A2D27;           /* Espresso */
-  --color-text-light: #6C5C4D;     /* Deep Brown */
+  --color-text: #2A1F1A;           /* Espresso — darker for AAA contrast */
+  --color-text-light: #4F3F35;     /* Deep Brown — darker for readability */
   --color-white: #FDFBF7;          /* Warm White */
   --color-overlay: rgba(58, 45, 39, 0.55);
 

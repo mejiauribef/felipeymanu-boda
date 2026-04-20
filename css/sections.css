@@ -16,8 +16,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(58,45,39,0.35), rgba(58,45,39,0.6)),
-    url('../assets/images/hero-bg.jpg') center/cover no-repeat;
+    linear-gradient(to bottom, rgba(42,31,26,0.5), rgba(42,31,26,0.7)),
+    url('../assets/images/hero-bg.svg') center/cover no-repeat;
   background-color: #A27E6F;
   z-index: -1;
 }
@@ -29,9 +29,9 @@
 
 .hero-greeting {
   font-family: var(--font-accent);
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
   font-style: italic;
-  opacity: 0.9;
+  opacity: 1;
   margin-bottom: var(--gap-md);
 }
 
@@ -70,15 +70,15 @@
 
 .hero-date {
   font-family: var(--font-body);
-  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  font-size: clamp(1rem, 2vw, 1.15rem);
   letter-spacing: 3px;
   text-transform: uppercase;
-  opacity: 0.85;
+  opacity: 1;
   margin-bottom: var(--gap-xl);
 }
 
 .hero .btn {
-  border-color: var(--color-white);
+  border: 2px solid var(--color-white);
   color: var(--color-white);
   background: transparent;
 }
@@ -115,10 +115,11 @@
 
 .countdown-label {
   font-family: var(--font-body);
-  font-size: 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
-  opacity: 0.8;
+  opacity: 1;
   margin-top: var(--gap-sm);
 }
 
@@ -173,15 +174,15 @@
 }
 
 .event-card p {
-  color: var(--color-text-light);
-  font-size: 0.95rem;
-  line-height: 1.7;
+  color: var(--color-text);
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
 .event-card .btn {
   margin-top: var(--gap-md);
-  font-size: 0.75rem;
-  padding: 0.6rem 1.5rem;
+  font-size: 0.85rem;
+  padding: 0.65rem 1.5rem;
 }
 
 /* ===================== MAP ===================== */
@@ -339,8 +340,8 @@
 }
 
 .album-content p {
-  color: var(--color-text-light);
-  font-size: 0.95rem;
+  color: var(--color-text);
+  font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: var(--gap-lg);
 }
@@ -427,21 +428,21 @@
 
 .form-group label {
   display: block;
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   letter-spacing: 0.5px;
   color: var(--color-text);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--color-cream-dark);
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--color-gold-dark);
   border-radius: var(--radius-sm);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   background: var(--color-cream);
   color: var(--color-text);
   transition: border-color var(--transition-fast);
@@ -518,8 +519,8 @@
 }
 
 .dresscode-col p {
-  font-size: 0.95rem;
-  color: var(--color-text-light);
+  font-size: 1.05rem;
+  color: var(--color-text);
   line-height: 1.6;
 }
 
@@ -534,26 +535,27 @@
 }
 
 .dresscode-restricted-label {
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--color-text-light);
+  color: var(--color-text);
   margin-bottom: var(--gap-md);
 }
 
 .dresscode-restricted-colors {
   display: flex;
   justify-content: center;
-  gap: var(--gap-lg);
+  flex-wrap: wrap;
+  gap: var(--gap-md) var(--gap-lg);
 }
 
 .dresscode-restricted-swatch {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.9rem;
-  color: var(--color-text-light);
+  font-size: 1rem;
+  color: var(--color-text);
 }
 
 .color-circle {
@@ -592,9 +594,9 @@
 }
 
 .gift-option p {
-  color: var(--color-text-light);
-  font-size: 0.95rem;
-  line-height: 1.7;
+  color: var(--color-text);
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
 .copy-account {
@@ -602,11 +604,12 @@
   align-items: center;
   gap: var(--gap-sm);
   margin-top: var(--gap-md);
-  padding: 0.6rem 1.2rem;
+  padding: 0.75rem 1.4rem;
   background: var(--color-sage);
   color: var(--color-white);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: background var(--transition-fast);
@@ -617,8 +620,9 @@
 }
 
 .copy-feedback {
-  font-size: 0.8rem;
-  color: var(--color-sage);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-sage-dark);
   margin-top: var(--gap-sm);
   opacity: 0;
   transition: opacity var(--transition-fast);
@@ -652,14 +656,14 @@
 .footer-date {
   font-family: var(--font-accent);
   font-style: italic;
-  font-size: 1rem;
-  opacity: 0.8;
+  font-size: 1.1rem;
+  opacity: 0.95;
 }
 
 .footer-heart {
   margin: var(--gap-md) 0;
   font-size: 1.5rem;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 /* ===================== MUSIC PLAYER ===================== */

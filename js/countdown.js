@@ -1,11 +1,11 @@
 /**
- * Live countdown to July 19, 2026 at 4:00 PM Colombia time (UTC-5).
+ * Live countdown to July 18, 2026 at 4:00 PM Colombia time (UTC-5).
  */
 let countdownInterval = null;
 
 function initCountdown() {
-  // July 19, 2026 4:00 PM UTC-5 = July 19, 2026 9:00 PM UTC
-  const weddingDate = new Date('2026-07-19T21:00:00Z');
+  // July 18, 2026 4:00 PM UTC-5 = July 18, 2026 9:00 PM UTC
+  const weddingDate = new Date('2026-07-18T21:00:00Z');
 
   function update() {
     const now = new Date();
